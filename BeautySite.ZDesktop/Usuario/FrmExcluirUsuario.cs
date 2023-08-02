@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,18 +13,14 @@ using System.Windows.Forms;
 
 namespace BeautySite.ZDesktop.Usuario
 {
-    public partial class FrmEditarUsuario : Form
+    public partial class FrmExcluirUsuario : Form
     {
-        UsuarioDTO objModelo = new UsuarioDTO();
         UsuarioBLL objBLL = new UsuarioBLL();
-        public FrmEditarUsuario()
+        UsuarioDTO objModelo = new UsuarioDTO();
+
+        public FrmExcluirUsuario()
         {
             InitializeComponent();
-        }
-
-        private void FrmEditarUsuario_Load(object sender, EventArgs e)
-        {
-            cpInativo();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -38,27 +33,10 @@ namespace BeautySite.ZDesktop.Usuario
             Limpar.ClearControl(this);
             txtTel.Text = string.Empty;
             cbo1.Text = string.Empty;
+            cpInativo();
             txtSearch.Focus();
-        }
 
-        public void cpAtivo()
-        {
-            txtId.Enabled = false;
-            txtNome.Enabled = true;
-            txtEmail.Enabled = true;
-            txtSenha.Enabled = true;
-            txtTel.Enabled = true;
-            cbo1.Enabled = true;
-        }
-
-        public void cpInativo()
-        {
-            txtId.Enabled = false;
-            txtNome.Enabled = false;
-            txtEmail.Enabled = false;
-            txtSenha.Enabled = false;
-            txtTel.Enabled = false;
-            cbo1.Enabled = false;
+            
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
@@ -84,37 +62,52 @@ namespace BeautySite.ZDesktop.Usuario
                 txtTel.Text = objModelo.Telefone.ToString();
                 cbo1.SelectedText = objModelo.TipoUsuario_IdTipoUsuario.ToString();
             }
-            cpAtivo();
-
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
+        public void cpAtivo()
         {
-            objModelo = new UsuarioDTO();
+            txtId.Enabled = false;
+            txtNome.Enabled = true;
+            txtEmail.Enabled = true;
+            txtSenha.Enabled = true;
+            txtTel.Enabled = true;
+            cbo1.Enabled = true;
+        }
 
-            objModelo.IdUsuario = Convert.ToInt32(txtId.Text);
-            objModelo.Nome = txtNome.Text.Trim();
-            objModelo.Senha = txtSenha.Text.Trim();
-            objModelo.Email = txtEmail.Text.Trim();
-            objModelo.Telefone = txtTel.Text.Trim();
-            if(cbo1.Text == "Adminastrador")
+        public void cpInativo()
+        {
+            txtId.Enabled = false;
+            txtNome.Enabled = false;
+            txtEmail.Enabled = false;
+            txtSenha.Enabled = false;
+            txtTel.Enabled = false;
+            cbo1.Enabled = false;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var confirmar = MessageBox.Show($"Deseja excluir {objModelo.Nome}?", "Atenção", MessageBoxButtons.YesNo);
+            if (confirmar == DialogResult.Yes) 
             {
-                objModelo.TipoUsuario_IdTipoUsuario = "1";
+                objModelo.IdUsuario = int.Parse(txtId.Text);
+                objBLL.DeleteUser(objModelo.IdUsuario);
+                cbo1.Text = string.Empty;
+                txtTel.Text = string.Empty;
+                Limpar.ClearControl(this);
+                MessageBox.Show($"Usuario {objModelo.Nome} obliterado com sucesso!!");
+                txtSearch.Focus();
+                cpInativo();
             }
-            else if (cbo1.Text == "Outros")
+            else if(confirmar == DialogResult.No)
             {
-                objModelo.TipoUsuario_IdTipoUsuario = "2";
+                FrmExcluirUsuario obj = new FrmExcluirUsuario();
+                obj.ShowDialog();
             }
+        }
 
-            objBLL.UpdateUser(objModelo);
-            Limpar.ClearControl(this);
-            txtTel.Text = string.Empty;
-            cbo1.Text = string.Empty;
-            txtSearch.Focus();
-            MessageBox.Show($"Usuario {objModelo.Nome} com sucesso!!");
-
+        private void FrmExcluirUsuario_Load(object sender, EventArgs e)
+        {
             cpInativo();
-
         }
     }
 }

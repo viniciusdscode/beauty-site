@@ -37,6 +37,11 @@ namespace BeautySite.BLL
             return objBLL.SearchName(objSearch);
         }
 
+        public UsuarioDTO SearchByNameDesk(string objSearch)
+        {
+            return objBLL.SearchNameDsk(objSearch);
+        }
+
         public UsuarioDTO SearchById(int objSearch)
         {
             return objBLL.SearchId(objSearch);

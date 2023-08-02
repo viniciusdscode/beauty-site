@@ -1,6 +1,6 @@
 ﻿namespace BeautySite.ZDesktop.Usuario
 {
-    partial class FrmEditarUsuario
+    partial class FrmExcluirUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEditarUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmExcluirUsuario));
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.MaskedTextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.cbo1 = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisar.Location = new System.Drawing.Point(850, 211);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(89, 73);
+            this.btnPesquisar.TabIndex = 1;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(504, 211);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(319, 20);
+            this.txtSearch.TabIndex = 0;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(504, 264);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(319, 20);
+            this.txtId.TabIndex = 8;
             // 
             // panel2
             // 
@@ -110,7 +136,7 @@
             this.txtTel.Mask = "(00)90000-0000";
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(435, 20);
-            this.txtTel.TabIndex = 8;
+            this.txtTel.TabIndex = 3;
             // 
             // btnLimpar
             // 
@@ -126,19 +152,19 @@
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // btnCadastrar
+            // btnExcluir
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(30)))), ((int)(((byte)(161)))));
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.Goldenrod;
-            this.btnCadastrar.Location = new System.Drawing.Point(504, 639);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(136, 55);
-            this.btnCadastrar.TabIndex = 2;
-            this.btnCadastrar.Text = "Editar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnExcluir.BackColor = System.Drawing.Color.Red;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.btnExcluir.Location = new System.Drawing.Point(504, 639);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(136, 55);
+            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // cbo1
             // 
@@ -154,7 +180,7 @@
             this.txtEmail.MaxLength = 150;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(435, 20);
-            this.txtEmail.TabIndex = 7;
+            this.txtEmail.TabIndex = 2;
             // 
             // txtSenha
             // 
@@ -162,7 +188,7 @@
             this.txtSenha.MaxLength = 8;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(435, 20);
-            this.txtSenha.TabIndex = 6;
+            this.txtSenha.TabIndex = 1;
             // 
             // txtNome
             // 
@@ -170,7 +196,37 @@
             this.txtNome.MaxLength = 150;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(435, 20);
-            this.txtNome.TabIndex = 5;
+            this.txtNome.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))));
+            this.panel1.Controls.Add(this.btnPesquisar);
+            this.panel1.Controls.Add(this.txtSearch);
+            this.panel1.Controls.Add(this.txtId);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.txtTel);
+            this.panel1.Controls.Add(this.btnLimpar);
+            this.panel1.Controls.Add(this.btnExcluir);
+            this.panel1.Controls.Add(this.cbo1);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.txtSenha);
+            this.panel1.Controls.Add(this.txtNome);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.btnFechar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1000, 800);
+            this.panel1.TabIndex = 2;
             // 
             // label8
             // 
@@ -216,6 +272,28 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Senha:";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Comfortaa", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label10.Location = new System.Drawing.Point(503, 180);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(159, 28);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Digite Um Nome:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Comfortaa", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label9.Location = new System.Drawing.Point(503, 236);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 28);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Id:";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -248,99 +326,21 @@
             this.btnFechar.Location = new System.Drawing.Point(943, 0);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(57, 59);
-            this.btnFechar.TabIndex = 9;
+            this.btnFechar.TabIndex = 4;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))));
-            this.panel1.Controls.Add(this.btnPesquisar);
-            this.panel1.Controls.Add(this.txtSearch);
-            this.panel1.Controls.Add(this.txtId);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.txtTel);
-            this.panel1.Controls.Add(this.btnLimpar);
-            this.panel1.Controls.Add(this.btnCadastrar);
-            this.panel1.Controls.Add(this.cbo1);
-            this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.txtSenha);
-            this.panel1.Controls.Add(this.txtNome);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.btnFechar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 800);
-            this.panel1.TabIndex = 1;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisar.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisar.Location = new System.Drawing.Point(850, 211);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(89, 73);
-            this.btnPesquisar.TabIndex = 1;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(504, 211);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(319, 20);
-            this.txtSearch.TabIndex = 0;
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(504, 264);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(319, 20);
-            this.txtId.TabIndex = 4;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Comfortaa", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label10.Location = new System.Drawing.Point(503, 180);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(159, 28);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Digite Um Nome:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Comfortaa", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label9.Location = new System.Drawing.Point(503, 236);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(32, 28);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Id:";
-            // 
-            // FrmEditarUsuario
+            // FrmExcluirUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 800);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmEditarUsuario";
+            this.Name = "FrmExcluirUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEditarUsuario";
-            this.Load += new System.EventHandler(this.FrmEditarUsuario_Load);
+            this.Text = "FrmExcluirUsuario";
+            this.Load += new System.EventHandler(this.FrmExcluirUsuario_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -352,29 +352,29 @@
 
         #endregion
 
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox txtTel;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.ComboBox cbo1;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.Label label8;
         internal System.Windows.Forms.Label label7;
         internal System.Windows.Forms.Label label6;
         internal System.Windows.Forms.Label label5;
+        internal System.Windows.Forms.Label label10;
+        internal System.Windows.Forms.Label label9;
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.TextBox txtId;
-        internal System.Windows.Forms.Label label10;
-        internal System.Windows.Forms.Label label9;
     }
 }

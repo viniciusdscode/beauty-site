@@ -63,12 +63,14 @@ namespace BeautySite.ZDesktop
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-
+            FrmExcluirUsuario obj = new FrmExcluirUsuario();
+            obj.ShowDialog();
         }
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-
+            FrmRelatorioUsuario obj = new FrmRelatorioUsuario();
+            obj.ShowDialog();
         }
     }
 }

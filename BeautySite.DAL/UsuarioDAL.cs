@@ -135,6 +135,38 @@ namespace BeautySite.DAL
 			}
 		}
 
+        public UsuarioDTO SearchNameDsk(string objSearch)
+        {
+            try
+            {
+                Conectar();
+                cmd = new MySqlCommand("SELECT Usuario.idusuario, Nome, Email, Senha, Telefone, DescricaoTipoUsuario FROM Usuario INNER JOIN TipoUsuario ON Usuario.IdTipoUsuario = TipoUsuario.IdTipoUsuario WHERE Usuario.Nome = @Nome;", conn);
+                cmd.Parameters.AddWithValue("@Nome", objSearch);
+                dr = cmd.ExecuteReader();
+                UsuarioDTO obj = null;
+                if (dr.Read())
+                {
+                    obj = new UsuarioDTO();
+                    obj.IdUsuario = Convert.ToInt32(dr["IdUsuario"]);
+                    obj.Nome = dr["Nome"].ToString();
+                    obj.Email = dr["Email"].ToString();
+                    obj.Senha = dr["Senha"].ToString();
+                    obj.Telefone = dr["Telefone"].ToString();
+                    obj.TipoUsuario_IdTipoUsuario = dr["DescricaoTipoUsuario"].ToString();
+                }
+                return obj;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Deu Ruim !" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
         public UsuarioDTO SearchId(int objSearch)
         {
             try

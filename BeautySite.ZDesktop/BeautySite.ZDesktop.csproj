@@ -52,6 +52,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRelatorioUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioUsuario.Designer.cs">
+      <DependentUpon>FrmRelatorioUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,9 +79,18 @@
     <Compile Include="Usuario\FrmEditarUsuario.Designer.cs">
       <DependentUpon>FrmEditarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuario\FrmExcluirUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\FrmExcluirUsuario.Designer.cs">
+      <DependentUpon>FrmExcluirUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilitarios\Limpar.cs" />
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioUsuario.resx">
+      <DependentUpon>FrmRelatorioUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -94,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario\FrmEditarUsuario.resx">
       <DependentUpon>FrmEditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\FrmExcluirUsuario.resx">
+      <DependentUpon>FrmExcluirUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
