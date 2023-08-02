@@ -85,6 +85,7 @@
     <Compile Include="Usuario\FrmExcluirUsuario.Designer.cs">
       <DependentUpon>FrmExcluirUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilitarios\DGVPrinter.cs" />
     <Compile Include="Utilitarios\Limpar.cs" />
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

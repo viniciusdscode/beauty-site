@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRelatorioUsuario));
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -72,16 +72,16 @@
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // label3
+            // lblTitulo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comfortaa", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label3.Location = new System.Drawing.Point(308, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(400, 60);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Relatorio Usuários";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Comfortaa", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.AliceBlue;
+            this.lblTitulo.Location = new System.Drawing.Point(308, 51);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(400, 60);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "Relatorio Usuários";
             // 
             // btnFechar
             // 
@@ -106,7 +106,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnLimpar);
             this.panel1.Controls.Add(this.btnCadastrar);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.btnFechar);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -196,7 +196,7 @@
         #endregion
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnCadastrar;
-        internal System.Windows.Forms.Label label3;
+        internal System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.Label label1;

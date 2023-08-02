@@ -1,4 +1,5 @@
 ﻿using BeautySite.BLL;
+using DGVPrinterHelper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,14 +37,21 @@ namespace BeautySite.ZDesktop
             gv1.Visible = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+
+            printer.Title = lblTitulo.Text;
+            printer.PageNumbers = true;
+            printer.PorportionalColumns = true;
+            printer.Footer = DateTime.Now.ToString();
+            printer.PrintDataGridView(gv1);
+        }
     }
+
 }
