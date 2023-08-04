@@ -36,7 +36,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnImg = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pc1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +64,7 @@
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.btnImg);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pc1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnLimpar);
             this.panel1.Controls.Add(this.btnEditar);
@@ -84,14 +84,16 @@
             // btnPesquisar
             // 
             this.btnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))));
+            this.btnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnPesquisar.Location = new System.Drawing.Point(865, 162);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(79, 74);
-            this.btnPesquisar.TabIndex = 14;
+            this.btnPesquisar.TabIndex = 1;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // txtId
             // 
@@ -99,7 +101,7 @@
             this.txtId.MaxLength = 150;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(342, 20);
-            this.txtId.TabIndex = 12;
+            this.txtId.TabIndex = 2;
             // 
             // label7
             // 
@@ -118,7 +120,7 @@
             this.txtSearch.MaxLength = 150;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(341, 20);
-            this.txtSearch.TabIndex = 10;
+            this.txtSearch.TabIndex = 0;
             // 
             // label6
             // 
@@ -134,6 +136,7 @@
             // btnImg
             // 
             this.btnImg.BackColor = System.Drawing.Color.White;
+            this.btnImg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImg.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImg.ForeColor = System.Drawing.Color.Black;
             this.btnImg.Image = ((System.Drawing.Image)(resources.GetObject("btnImg.Image")));
@@ -141,18 +144,20 @@
             this.btnImg.Location = new System.Drawing.Point(509, 624);
             this.btnImg.Name = "btnImg";
             this.btnImg.Size = new System.Drawing.Size(432, 58);
-            this.btnImg.TabIndex = 9;
+            this.btnImg.TabIndex = 5;
             this.btnImg.Text = "Selecione a Imagem:";
             this.btnImg.UseVisualStyleBackColor = false;
+            this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
             // 
-            // pictureBox2
+            // pc1
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(509, 378);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(431, 215);
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.pc1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pc1.Location = new System.Drawing.Point(509, 378);
+            this.pc1.Name = "pc1";
+            this.pc1.Size = new System.Drawing.Size(431, 215);
+            this.pc1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pc1.TabIndex = 8;
+            this.pc1.TabStop = false;
             // 
             // panel2
             // 
@@ -203,36 +208,40 @@
             // btnLimpar
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(30)))), ((int)(((byte)(161)))));
             this.btnLimpar.Location = new System.Drawing.Point(808, 711);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(136, 55);
-            this.btnLimpar.TabIndex = 6;
+            this.btnLimpar.TabIndex = 7;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(30)))), ((int)(((byte)(161)))));
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.Goldenrod;
             this.btnEditar.Location = new System.Drawing.Point(508, 711);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(136, 55);
-            this.btnEditar.TabIndex = 5;
+            this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txtDescServico
             // 
             this.txtDescServico.Location = new System.Drawing.Point(509, 338);
-            this.txtDescServico.MaxLength = 8;
+            this.txtDescServico.MaxLength = 150;
             this.txtDescServico.Name = "txtDescServico";
             this.txtDescServico.Size = new System.Drawing.Size(435, 20);
-            this.txtDescServico.TabIndex = 1;
+            this.txtDescServico.TabIndex = 4;
             // 
             // txtServico
             // 
@@ -240,7 +249,7 @@
             this.txtServico.MaxLength = 150;
             this.txtServico.Name = "txtServico";
             this.txtServico.Size = new System.Drawing.Size(435, 20);
-            this.txtServico.TabIndex = 0;
+            this.txtServico.TabIndex = 3;
             // 
             // label5
             // 
@@ -285,7 +294,7 @@
             this.btnFechar.Location = new System.Drawing.Point(943, 0);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(57, 59);
-            this.btnFechar.TabIndex = 0;
+            this.btnFechar.TabIndex = 8;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
@@ -299,9 +308,10 @@
             this.Name = "FrmEditarServico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditarServico";
+            this.Load += new System.EventHandler(this.FrmEditarServico_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -313,7 +323,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnImg;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pc1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         internal System.Windows.Forms.Label label1;

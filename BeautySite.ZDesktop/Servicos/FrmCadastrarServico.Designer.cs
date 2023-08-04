@@ -43,11 +43,11 @@
             this.btnFechar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnImg = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pc1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -99,33 +99,37 @@
             // btnLimpar
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(30)))), ((int)(((byte)(161)))));
             this.btnLimpar.Location = new System.Drawing.Point(800, 632);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(136, 55);
-            this.btnLimpar.TabIndex = 6;
+            this.btnLimpar.TabIndex = 4;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(30)))), ((int)(((byte)(161)))));
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.Goldenrod;
             this.btnCadastrar.Location = new System.Drawing.Point(500, 632);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(136, 55);
-            this.btnCadastrar.TabIndex = 5;
+            this.btnCadastrar.TabIndex = 3;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtDescServico
             // 
             this.txtDescServico.Location = new System.Drawing.Point(501, 259);
-            this.txtDescServico.MaxLength = 8;
+            this.txtDescServico.MaxLength = 150;
             this.txtDescServico.Name = "txtDescServico";
             this.txtDescServico.Size = new System.Drawing.Size(435, 20);
             this.txtDescServico.TabIndex = 1;
@@ -181,7 +185,7 @@
             this.btnFechar.Location = new System.Drawing.Point(943, 0);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(57, 59);
-            this.btnFechar.TabIndex = 0;
+            this.btnFechar.TabIndex = 5;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
@@ -189,7 +193,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))));
             this.panel1.Controls.Add(this.btnImg);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pc1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnLimpar);
             this.panel1.Controls.Add(this.btnCadastrar);
@@ -209,6 +213,7 @@
             // btnImg
             // 
             this.btnImg.BackColor = System.Drawing.Color.White;
+            this.btnImg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImg.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImg.ForeColor = System.Drawing.Color.Black;
             this.btnImg.Image = ((System.Drawing.Image)(resources.GetObject("btnImg.Image")));
@@ -216,18 +221,20 @@
             this.btnImg.Location = new System.Drawing.Point(501, 545);
             this.btnImg.Name = "btnImg";
             this.btnImg.Size = new System.Drawing.Size(432, 58);
-            this.btnImg.TabIndex = 9;
+            this.btnImg.TabIndex = 2;
             this.btnImg.Text = "Selecione a Imagem:";
             this.btnImg.UseVisualStyleBackColor = false;
+            this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
             // 
-            // pictureBox2
+            // pc1
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(501, 299);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(431, 215);
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.pc1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pc1.Location = new System.Drawing.Point(501, 299);
+            this.pc1.Name = "pc1";
+            this.pc1.Size = new System.Drawing.Size(431, 215);
+            this.pc1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pc1.TabIndex = 8;
+            this.pc1.TabStop = false;
             // 
             // FrmCadastrarServico
             // 
@@ -244,7 +251,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,6 +272,6 @@
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnImg;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pc1;
     }
 }

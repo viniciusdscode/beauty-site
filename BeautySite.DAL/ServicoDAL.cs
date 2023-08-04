@@ -76,8 +76,39 @@ namespace BeautySite.DAL
 
         }
 
-		//CRUD
-		public void CadastrarServico(ServicoDTO objCad)
+        public ServicoDTO SearchServicoDsk(string objSearch)
+        {
+            try
+            {
+                Conectar();
+                cmd = new MySqlCommand("SELECT * FROM Servico WHERE Servico.NomeServico = @NomeServico;", conn);
+                cmd.Parameters.AddWithValue("@NomeServico", objSearch);
+                dr = cmd.ExecuteReader();
+                ServicoDTO obj = null;
+                if (dr.Read())
+                {
+                    obj = new ServicoDTO();
+                    obj.IdServico = Convert.ToInt32(dr["IdServico"]);
+                    obj.NomeServico = dr["NomeServico"].ToString();
+                    obj.DescricaoServico = dr["DescricaoServico"].ToString();
+                    obj.UrlImgServico = dr["UrlImgServico"].ToString();
+                }
+                return obj;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Deu Ruim !!" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+
+        }
+
+        //CRUD
+        public void CadastrarServico(ServicoDTO objCad)
 		{
 			try
 			{
@@ -106,6 +137,30 @@ namespace BeautySite.DAL
             {
                 Conectar();
                 cmd = new MySqlCommand("UPDATE servico SET NomeServico=@NomeServico, DescricaoServico=@DescricaoServico, UrlImgServico=@UrlImgServico WHERE servico.IdServico = @IdServico;", conn);
+                cmd.Parameters.AddWithValue("@NomeServico", objUpdt.NomeServico);
+                cmd.Parameters.AddWithValue("@DescricaoServico", objUpdt.DescricaoServico);
+                cmd.Parameters.AddWithValue("@UrlImgServico", objUpdt.UrlImgServico);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Deu Ruim!!!" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
+        public void UpdateDsk(ServicoDTO objUpdt)
+        {
+            try
+            {
+                Conectar();
+                cmd = new MySqlCommand("UPDATE servico SET NomeServico=@NomeServico, DescricaoServico=@DescricaoServico, UrlImgServico=@UrlImgServico WHERE servico.IdServico = @IdServico;", conn);
+                cmd.Parameters.AddWithValue("@IdServico", objUpdt.IdServico);
                 cmd.Parameters.AddWithValue("@NomeServico", objUpdt.NomeServico);
                 cmd.Parameters.AddWithValue("@DescricaoServico", objUpdt.DescricaoServico);
                 cmd.Parameters.AddWithValue("@UrlImgServico", objUpdt.UrlImgServico);

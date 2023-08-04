@@ -22,6 +22,11 @@ namespace BeautySite.BLL
             return objBLL.SearchServico(objSearch);
         }
 
+        public ServicoDTO SearchServicoDesk(string objSearchDsk)
+        {
+            return objBLL.SearchServicoDsk(objSearchDsk);
+        }
+
         //CRUD BLL
         public void CadastrarServicoBLL(ServicoDTO objCad)
         {
@@ -31,6 +36,11 @@ namespace BeautySite.BLL
         public void UpdateServico(ServicoDTO objUpdt)
         {
             objBLL.Update(objUpdt);
+        }
+
+        public void UpdateServicoDsk(ServicoDTO objUpdt)
+        {
+            objBLL.UpdateDsk(objUpdt);
         }
 
         public void DeleteServico(int objDel)
