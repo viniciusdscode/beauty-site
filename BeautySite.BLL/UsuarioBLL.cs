@@ -26,6 +26,8 @@ namespace BeautySite.BLL
         {
             return objBLL.Listar();
         }
+        
+
 
         public List<TipoUsuarioDTO> CarregaDDList()
         {

@@ -50,3 +50,10 @@ C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debu
 C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.Usuario.FrmEditarUsuario.resources
 C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.Usuario.FrmExcluirUsuario.resources
 C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.FrmRelatorioUsuario.resources
+C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.Servicos.FrmCadastrarServico.resources
+C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.Servicos.FrmEditarServico.resources
+C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.Servicos.FrmExcluirServico.resources
+C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.Direcao.FrmDirecaoCadastro.resources
+C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.Direcao.FrmDirecaoEdit.resources
+C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.Direcao.FrmDirecaoExcluir.resources
+C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.Direcao.FrmDirecaoRelatorio.resources

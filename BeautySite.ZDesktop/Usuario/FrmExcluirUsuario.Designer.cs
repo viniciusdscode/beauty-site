@@ -312,9 +312,9 @@
             this.label3.ForeColor = System.Drawing.Color.AliceBlue;
             this.label3.Location = new System.Drawing.Point(561, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(323, 60);
+            this.label3.Size = new System.Drawing.Size(332, 60);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Editar Usuário";
+            this.label3.Text = "Excluir Usuário";
             // 
             // btnFechar
             // 

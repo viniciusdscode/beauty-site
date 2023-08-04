@@ -22,7 +22,11 @@ namespace BeautySite.ZDesktop
         public void PopularGV1()
         {
             UsuarioBLL objBLL = new UsuarioBLL();
+            gv1.Columns["UrlImg"].Visible = false;
+            gv1.Columns["TipoUsuario_IdTipoUsuario"].HeaderText = "Descrição";
+
             gv1.DataSource = objBLL.ListarUsuario();
+
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -52,6 +56,7 @@ namespace BeautySite.ZDesktop
             printer.Footer = DateTime.Now.ToString();
             printer.PrintDataGridView(gv1);
         }
+
     }
 
 }

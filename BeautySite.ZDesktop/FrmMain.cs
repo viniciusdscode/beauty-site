@@ -1,4 +1,5 @@
-﻿using BeautySite.ZDesktop.Usuario;
+﻿using BeautySite.ZDesktop.Direcao;
+using BeautySite.ZDesktop.Usuario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,23 +30,24 @@ namespace BeautySite.ZDesktop
 
             if (hora < 12)
             {
-                lblSession.Text = $"Bom Dia {Session.nomeUsuario}, Bem vindo à BeautySite!!";
+                label1.Text = $"Bom Dia {Session.nomeUsuario}, Bem vindo à BeautySite!!";
             }
             else if (hora < 18)
             {
-                lblSession.Text = $"Boa Tarde {Session.nomeUsuario}, Bem vindo à BeautySite!!";
+                label1.Text = $"Boa Tarde {Session.nomeUsuario}, Bem vindo à BeautySite!!";
             }
             else if (hora < 00)
             {
-                lblSession.Text = $"Boa Noite {Session.nomeUsuario}, Bem vindo à BeautySite!!";
+                label1.Text = $"Boa Noite {Session.nomeUsuario}, Bem vindo à BeautySite!!";
             }
 
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            FrmCadastrarUsuario obj = new FrmCadastrarUsuario();
+            FrmDirecaoCadastro obj = new FrmDirecaoCadastro();
             obj.ShowDialog();
+            
 
         }
 
@@ -57,20 +59,22 @@ namespace BeautySite.ZDesktop
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            FrmEditarUsuario obj = new FrmEditarUsuario();
+            FrmDirecaoEdit obj = new FrmDirecaoEdit();
             obj.ShowDialog();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            FrmExcluirUsuario obj = new FrmExcluirUsuario();
+            FrmDirecaoExcluir obj = new FrmDirecaoExcluir();
             obj.ShowDialog();
         }
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            FrmRelatorioUsuario obj = new FrmRelatorioUsuario();
+            FrmDirecaoRelatorio obj = new FrmDirecaoRelatorio();
             obj.ShowDialog();
         }
+
+        
     }
 }

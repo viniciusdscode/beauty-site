@@ -74,7 +74,9 @@ namespace BeautySite.DAL
 			}
 		}
 
-		public List<TipoUsuarioDTO> CarregaDDL()
+        
+
+        public List<TipoUsuarioDTO> CarregaDDL()
 		{
 			try
 			{
