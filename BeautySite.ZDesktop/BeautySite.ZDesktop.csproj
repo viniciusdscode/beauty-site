@@ -207,6 +207,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ICO\" />
     <Folder Include="ImgSave\" />
     <Folder Include="Resources\" />
   </ItemGroup>

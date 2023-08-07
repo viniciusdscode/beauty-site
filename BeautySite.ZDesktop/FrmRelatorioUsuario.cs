@@ -22,10 +22,11 @@ namespace BeautySite.ZDesktop
         public void PopularGV1()
         {
             UsuarioBLL objBLL = new UsuarioBLL();
+            gv1.DataSource = objBLL.ListarUsuario();
+
             gv1.Columns["UrlImg"].Visible = false;
             gv1.Columns["TipoUsuario_IdTipoUsuario"].HeaderText = "Descrição";
 
-            gv1.DataSource = objBLL.ListarUsuario();
 
         }
 
