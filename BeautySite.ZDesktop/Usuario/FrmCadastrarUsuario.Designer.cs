@@ -268,7 +268,7 @@
             this.btnFechar.Location = new System.Drawing.Point(943, 0);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(57, 59);
-            this.btnFechar.TabIndex = 0;
+            this.btnFechar.TabIndex = 7;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 

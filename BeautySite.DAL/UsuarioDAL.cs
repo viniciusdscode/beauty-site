@@ -42,7 +42,36 @@ namespace BeautySite.DAL
 			}
         }
 
-		public List<UsuarioDTO> Listar()
+        public UsuarioDTO AutenticarDsk(string nome)
+        {
+            try
+            {
+                Conectar();
+                cmd = new MySqlCommand("SELECT * FROM Usuario WHERE Nome = @Nome", conn);
+                cmd.Parameters.AddWithValue("@Nome", nome);
+                dr = cmd.ExecuteReader();
+                UsuarioDTO obj = null;
+                if (dr.Read())
+                {
+                    obj = new UsuarioDTO();
+                    obj.Nome = dr["Nome"].ToString();
+
+                }
+                return obj;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Usuário não cadastrado !" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
+        public List<UsuarioDTO> Listar()
 		{
 			try
 			{
@@ -73,8 +102,6 @@ namespace BeautySite.DAL
 				Desconectar();
 			}
 		}
-
-        
 
         public List<TipoUsuarioDTO> CarregaDDL()
 		{
@@ -233,7 +260,7 @@ namespace BeautySite.DAL
 			try
 			{
 				Conectar();
-				cmd = new MySqlCommand("UPDATE Usuario SET Nome=@Nome, Email=@Email, Senha=@Senha, Telefone=@Telefone, IdTipoUsuario=@IdTipoUsuario WHERE Usuario.IdUsuario =@IdUsuario;", conn);
+				cmd = new MySqlCommand("UPDATE Usuario SET Nome=@Nome, Email=@Email, Senha=@Senha, Telefone=@Telefone, IdTipoUsuario=@IdTipoUsuario WHERE Usuario.IdUsuario = @IdUsuario;", conn);
                 cmd.Parameters.AddWithValue("@Nome", objUpdt.Nome);
                 cmd.Parameters.AddWithValue("@Email", objUpdt.Email);
                 cmd.Parameters.AddWithValue("@Senha", objUpdt.Senha);
@@ -252,8 +279,9 @@ namespace BeautySite.DAL
 				Desconectar();
 			}
 		}
+        
 
-		public void Delete(int objDel)
+        public void Delete(int objDel)
 		{
 			try
 			{

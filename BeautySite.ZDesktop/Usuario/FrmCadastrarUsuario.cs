@@ -56,12 +56,12 @@ namespace BeautySite.ZDesktop.Usuario
                 objCad.TipoUsuario_IdTipoUsuario = cbo1.SelectedValue.ToString();
 
                 objBLL.CadastrarUsuario(objCad);
+
+                MessageBox.Show($"Usuário {txtNome.Text} Cadastrado com sucesso!!");
                 Limpar.ClearControl(this);
                 cbo1.Text = string.Empty;
                 txtTel.Text = string.Empty;
                 txtNome.Focus();
-
-                MessageBox.Show($"Usuário Cadastrado com sucesso!!");
             }
         }
 

@@ -22,6 +22,14 @@ namespace BeautySite.BLL
             
         }
 
+        public UsuarioDTO AutenticarUsuarioDsk(string objNome)
+        {
+            UsuarioDTO user = objBLL.AutenticarDsk(objNome);
+
+            return user;
+
+        }
+
         public List<UsuarioDTO> ListarUsuario()
         {
             return objBLL.Listar();
@@ -58,6 +66,9 @@ namespace BeautySite.BLL
         {
             objBLL.Update(objUpdt);
         }
+
+
+        
 
         public void DeleteUser(int objDel)
         {

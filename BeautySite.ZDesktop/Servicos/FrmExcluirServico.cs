@@ -17,7 +17,7 @@ namespace BeautySite.ZDesktop.Servicos
     {
         ServicoDTO objModeloServico = new ServicoDTO();
 
-        
+
 
         public FrmExcluirServico()
         {
@@ -41,17 +41,17 @@ namespace BeautySite.ZDesktop.Servicos
             ServicoBLL objBLL = new ServicoBLL();
 
             objModeloServico = objBLL.SearchServicoDesk(objSearchDsk);
-            if (string.IsNullOrEmpty(objSearchDsk))
+            if (string.IsNullOrEmpty(txtSearch.Text))
             {
-                txtServico.Text = string.Empty;
-                txtServico.BackColor = Color.Red;
-                MessageBox.Show($"Digite uma pesquisa valida !!", "Atenção", MessageBoxButtons.OK);
-                txtServico.BackColor = DefaultBackColor;
-                txtServico.Focus();
+                txtSearch.Text = string.Empty;
+                txtSearch.BackColor = Color.Red;
+                MessageBox.Show($"Digite sua busca !!", "ATENÇÃO", MessageBoxButtons.OK);
+                txtSearch.BackColor = DefaultBackColor;
+                txtSearch.Focus();
                 return;
 
             }
-            else if (objSearchDsk != null)
+            else if (objModeloServico != null)
             {
                 txtId.Text = objModeloServico.IdServico.ToString();
                 txtServico.Text = objModeloServico.NomeServico.ToString();
@@ -59,7 +59,13 @@ namespace BeautySite.ZDesktop.Servicos
                 pc1.ImageLocation = objModeloServico.UrlImgServico;
 
             }
-            cpAtivo();
+            else
+            {
+                MessageBox.Show("Serviço não cadastrado !!", "ATENÇÃO");
+                Limpar.ClearControl(this);
+                txtSearch.Focus();
+            }
+            cpInativo();
 
         }
 
@@ -72,16 +78,20 @@ namespace BeautySite.ZDesktop.Servicos
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            ServicoBLL objBLL = new ServicoBLL();
+            if (ValidatePage())
+            {
+                ServicoBLL objBLL = new ServicoBLL();
 
-            objModeloServico.IdServico = int.Parse(txtId.Text);
-            objBLL.DeleteServico(objModeloServico.IdServico);
-            MessageBox.Show($"Serviço {txtSearch.Text} excluido com sucesso !!");
-            Limpar.ClearControl(this);
-            pc1.Image = null;
-            txtSearch.Focus();
-            cpInativo();
+                objModeloServico.IdServico = int.Parse(txtId.Text);
+                objBLL.DeleteServico(objModeloServico.IdServico);
+                MessageBox.Show($"Serviço {txtSearch.Text} excluido com sucesso !!");
+                Limpar.ClearControl(this);
+                pc1.Image = null;
+                txtSearch.Focus();
+                cpInativo();
+            }
         }
+
         public void cpAtivo()
         {
             txtServico.Enabled = true;
@@ -95,6 +105,33 @@ namespace BeautySite.ZDesktop.Servicos
             txtServico.Enabled = false;
             txtDescServico.Enabled = false;
             btnImg.Enabled = false;
+        }
+
+        public bool ValidatePage()
+        {
+            bool validator;
+
+            if (string.IsNullOrEmpty(txtSearch.Text))
+            {
+                txtSearch.BackColor = Color.Red;
+                MessageBox.Show("Digite uma busca !!", "ATENÇÃO");
+                txtSearch.BackColor = DefaultBackColor;
+                validator = false;
+            }
+            else if(string.IsNullOrEmpty(txtId.Text))
+            {
+                txtSearch.BackColor= Color.Red;
+                MessageBox.Show("Pesquise o serviço antes de editar !!","ATENÇÃO");
+                txtSearch.BackColor = DefaultBackColor;
+                validator = false;
+            }
+            else
+            {
+                validator = true;
+            }
+            return validator;
+
+
         }
 
     }

@@ -49,13 +49,22 @@ namespace BeautySite.ZDesktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DGVPrinter printer = new DGVPrinter();
+            if (gv1.DataSource != null )
+            {
 
-            printer.Title = lblTitulo.Text;
-            printer.PageNumbers = true;
-            printer.PorportionalColumns = true;
-            printer.Footer = DateTime.Now.ToString();
-            printer.PrintDataGridView(gv1);
+                DGVPrinter printer = new DGVPrinter();
+
+                printer.Title = lblTitulo.Text;
+                printer.PageNumbers = true;
+                printer.PorportionalColumns = true;
+                printer.Footer = DateTime.Now.ToString();
+                printer.PrintDataGridView(gv1);
+
+            }
+            else
+            {
+                MessageBox.Show("Exiba o relatório antes de baixar !!", "ATENÇÃO");
+            }
         }
 
     }

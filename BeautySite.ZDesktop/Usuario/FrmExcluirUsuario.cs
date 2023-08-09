@@ -36,7 +36,7 @@ namespace BeautySite.ZDesktop.Usuario
             cpInativo();
             txtSearch.Focus();
 
-            
+
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
@@ -46,11 +46,11 @@ namespace BeautySite.ZDesktop.Usuario
             objModelo = objBLL.SearchByNameDesk(objSearch);
             if (string.IsNullOrEmpty(txtSearch.Text))
             {
-                txtNome.Text = string.Empty;
-                txtNome.BackColor = Color.Red;
-                MessageBox.Show($"Usuario Não Cadastrado");
-                txtNome.BackColor = DefaultBackColor;
-                txtNome.Focus();
+                txtSearch.Text = string.Empty;
+                txtSearch.BackColor = Color.Red;
+                MessageBox.Show($"Digite uma busca válida !!","ATENÇÃO");
+                txtSearch.BackColor = DefaultBackColor;
+                txtSearch.Focus();
                 return;
             }
             else if (objModelo != null)
@@ -61,6 +61,12 @@ namespace BeautySite.ZDesktop.Usuario
                 txtEmail.Text = objModelo.Email.ToString();
                 txtTel.Text = objModelo.Telefone.ToString();
                 cbo1.SelectedText = objModelo.TipoUsuario_IdTipoUsuario.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Usuario não cadastrado !!");
+                Limpar.ClearControl(this);
+                txtSearch.Focus();
             }
         }
 
@@ -86,22 +92,26 @@ namespace BeautySite.ZDesktop.Usuario
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            var confirmar = MessageBox.Show($"Deseja excluir {objModelo.Nome}?", "Atenção", MessageBoxButtons.YesNo);
-            if (confirmar == DialogResult.Yes) 
+            if (ValidatePage())
             {
-                objModelo.IdUsuario = int.Parse(txtId.Text);
-                objBLL.DeleteUser(objModelo.IdUsuario);
-                cbo1.Text = string.Empty;
-                txtTel.Text = string.Empty;
-                Limpar.ClearControl(this);
-                MessageBox.Show($"Usuario {objModelo.Nome} obliterado com sucesso!!");
-                txtSearch.Focus();
-                cpInativo();
-            }
-            else if(confirmar == DialogResult.No)
-            {
-                FrmExcluirUsuario obj = new FrmExcluirUsuario();
-                obj.ShowDialog();
+                var confirmar = MessageBox.Show($"Deseja excluir {objModelo.Nome}?", "Atenção", MessageBoxButtons.YesNo);
+
+                if (confirmar == DialogResult.Yes)
+                {
+                    objModelo.IdUsuario = int.Parse(txtId.Text);
+                    objBLL.DeleteUser(objModelo.IdUsuario);
+                    cbo1.Text = string.Empty;
+                    txtTel.Text = string.Empty;
+                    Limpar.ClearControl(this);
+                    MessageBox.Show($"Usuario {objModelo.Nome} obliterado com sucesso!!");
+                    txtSearch.Focus();
+                    cpInativo();
+                }
+                else if (confirmar == DialogResult.No)
+                {
+                    FrmExcluirUsuario obj = new FrmExcluirUsuario();
+                    obj.ShowDialog();
+                }
             }
         }
 
@@ -109,5 +119,26 @@ namespace BeautySite.ZDesktop.Usuario
         {
             cpInativo();
         }
+
+        public bool ValidatePage()
+        {
+            bool validator;
+
+            if (string.IsNullOrEmpty(txtSearch.Text))
+            {
+                txtSearch.BackColor = Color.Red;
+                MessageBox.Show("Digite a Busca !!", "Atenção", MessageBoxButtons.OK);
+                txtSearch.BackColor = DefaultBackColor;
+                txtSearch.Focus();
+                validator = false;
+            }
+            else
+            {
+                validator = true;
+            }
+            return validator;
+
+        }
+
     }
 }
