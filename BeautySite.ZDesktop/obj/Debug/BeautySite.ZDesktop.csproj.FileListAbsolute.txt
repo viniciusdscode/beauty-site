@@ -57,3 +57,4 @@ C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debu
 C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.Direcao.FrmDirecaoEdit.resources
 C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.Direcao.FrmDirecaoExcluir.resources
 C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.Direcao.FrmDirecaoRelatorio.resources
+C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\obj\Debug\BeautySite.ZDesktop.FrmRelatorioServico.resources

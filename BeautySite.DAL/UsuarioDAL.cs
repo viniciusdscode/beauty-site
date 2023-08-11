@@ -328,6 +328,41 @@ namespace BeautySite.DAL
             }
         }
 
+        public List<UsuarioDTO> FiltrarUsuario(string objFilter)
+        {
+            try
+            {
+                Conectar();
+                cmd = new MySqlCommand("SELECT usuario.Idusuario, Nome, Email, Senha, Telefone, DescricaoTipoUsuario  FROM usuario INNER JOIN TipoUsuario ON Usuario.IdTipoUsuario = TipoUsuario.IdTipoUsuario WHERE DescricaoTipoUsuario = @DescricaoTipoUsuario;", conn);
+                cmd.Parameters.AddWithValue("@DescricaoTipoUsuario", objFilter);
+                dr = cmd.ExecuteReader();
+                List<UsuarioDTO> Lista = new List<UsuarioDTO>();//null list
+                while (dr.Read())
+                {
+                    UsuarioDTO obj = new UsuarioDTO();
+                    obj.IdUsuario = Convert.ToInt32(dr["IdUsuario"]);
+                    obj.Nome = dr["Nome"].ToString();
+                    obj.Email = dr["Email"].ToString();
+                    obj.Senha = dr["Senha"].ToString();
+                    obj.Telefone = dr["Telefone"].ToString();
+                    obj.TipoUsuario_IdTipoUsuario = dr["DescricaoTipoUsuario"].ToString();
+                    Lista.Add(obj);
+
+                }
+
+                return Lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro ao listar registros" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
 
 
 

@@ -17,7 +17,10 @@ namespace BeautySite.ZDesktop
         public FrmRelatorioUsuario()
         {
             InitializeComponent();
+            Inativo();
         }
+
+        UsuarioBLL objBLL = new UsuarioBLL();
 
         public void PopularGV1()
         {
@@ -32,14 +35,15 @@ namespace BeautySite.ZDesktop
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            gv1.Visible = false;
+            Inativo();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             PopularGV1();
+            PopularCBO();
             gv1.ReadOnly = true;
-            gv1.Visible = true;
+            Ativo();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -49,22 +53,52 @@ namespace BeautySite.ZDesktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (gv1.DataSource != null )
-            {
 
-                DGVPrinter printer = new DGVPrinter();
+            DGVPrinter printer = new DGVPrinter();
 
-                printer.Title = lblTitulo.Text;
-                printer.PageNumbers = true;
-                printer.PorportionalColumns = true;
-                printer.Footer = DateTime.Now.ToString();
-                printer.PrintDataGridView(gv1);
+            printer.Title = lblTitulo.Text;
+            printer.PageNumbers = true;
+            printer.PorportionalColumns = true;
+            printer.Footer = DateTime.Now.ToString();
+            printer.PrintDataGridView(gv1);
 
-            }
-            else
-            {
-                MessageBox.Show("Exiba o relatório antes de baixar !!", "ATENÇÃO");
-            }
+        }
+
+        public void Inativo()
+        {
+            gv1.Visible = false;
+            button1.Enabled = false;
+            cbo1.Visible = false;
+            btnFiltrar.Visible = false;
+            label3.Visible = false;
+
+        }
+
+        public void Ativo()
+        {
+            button1.Enabled = true;
+            gv1.Visible = true;
+            cbo1.Visible = true;
+            btnFiltrar.Visible = true;
+            label3.Visible = true;
+        }
+
+        public void PopularCBO()
+        {
+            cbo1.DataSource = objBLL.CarregaDDList();
+            cbo1.ValueMember = "IdTipoUsuario";
+            cbo1.DisplayMember = "DescricaoTipoUsuario";
+            cbo1.Refresh();
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            string objFiltro = cbo1.Text.ToString();
+
+            gv1.DataSource = objBLL.FiltarUsuarioBLL(objFiltro);
+            
+
+            
         }
 
     }

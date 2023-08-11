@@ -142,10 +142,13 @@
             // 
             // cbo1
             // 
+            this.cbo1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cbo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo1.Font = new System.Drawing.Font("Comfortaa", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo1.FormattingEnabled = true;
-            this.cbo1.Location = new System.Drawing.Point(504, 586);
+            this.cbo1.Location = new System.Drawing.Point(503, 586);
             this.cbo1.Name = "cbo1";
-            this.cbo1.Size = new System.Drawing.Size(435, 21);
+            this.cbo1.Size = new System.Drawing.Size(435, 26);
             this.cbo1.TabIndex = 4;
             // 
             // txtEmail
@@ -337,6 +340,7 @@
             this.ClientSize = new System.Drawing.Size(1000, 800);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEditarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditarUsuario";

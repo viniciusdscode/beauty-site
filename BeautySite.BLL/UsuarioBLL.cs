@@ -81,5 +81,10 @@ namespace BeautySite.BLL
             objBLL.CadastrarCliente(objCad);
         }
 
+        public List<UsuarioDTO> FiltarUsuarioBLL(string objFilter)
+        {
+            return objBLL.FiltrarUsuario(objFilter);
+        }
+
     }
 }

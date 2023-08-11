@@ -150,6 +150,9 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioServico.resx">
+      <DependentUpon>FrmRelatorioServico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRelatorioUsuario.resx">
       <DependentUpon>FrmRelatorioUsuario.cs</DependentUpon>
     </EmbeddedResource>
