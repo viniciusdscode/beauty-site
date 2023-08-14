@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BeautySite.BLL;
+using BeautySite.ZDesktop.Utilitarios;
+using BeautySite.DTO;
 
 namespace BeautySite.ZDesktop
 {
@@ -19,6 +21,9 @@ namespace BeautySite.ZDesktop
             InitializeComponent();
             Inativo();
         }
+
+        ServicoBLL objBLL = new ServicoBLL();
+        ServicoDTO objDTO = new ServicoDTO();
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
@@ -71,17 +76,71 @@ namespace BeautySite.ZDesktop
             }
         }
 
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (ValidatePage())
+            {
+                string objSearchDsk = txtPesquisa.Text;
+
+                gv1.DataSource = objBLL.FiltrarServicoBLL(objSearchDsk);
+                if (string.IsNullOrEmpty(txtPesquisa.Text))
+                {
+                    MessageBox.Show("Digite Um serviço existente!!");
+                    txtPesquisa.Focus();
+                }
+                else if (gv1.DataSource != null)
+                {
+                    CarregaImg();
+                    txtPesquisa.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Digite Um serviço existente!!");
+                }
+            }
+
+
+        }
+
+        public bool ValidatePage()
+        {
+            bool validator;
+
+            if (string.IsNullOrEmpty(txtPesquisa.Text))
+            {
+                txtPesquisa.BackColor = Color.Red;
+                MessageBox.Show("Digite uma busca !!", "ATENÇÃO");
+                txtPesquisa.BackColor = DefaultBackColor;
+                validator = false;
+            }
+            else
+            {
+
+                validator = true;
+            }
+            return validator;
+
+
+        }
+
         public void Inativo()
         {
             gv1.Visible = false;
             button1.Enabled = false;
+            label3.Visible = false;
+            txtPesquisa.Visible = false;
+            btnPesquisar.Visible = false;
         }
 
         public void Ativo()
         {
             button1.Enabled = true;
             gv1.Visible = true;
+            label3.Visible = true;
+            txtPesquisa.Visible = true;
+            btnPesquisar.Visible = true;
         }
+
 
     }
 }

@@ -53,5 +53,7 @@ namespace BeautySite.BLL
             return objBLL.FiltrarServico(objFilter);
         }
 
+        
+
     }
 }
