@@ -30,6 +30,7 @@ namespace BeautySite.UI.adm
             gv1.DataSource = objBLLServico.ListarServico();
             gv1.DataBind();
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
