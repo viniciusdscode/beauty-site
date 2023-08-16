@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 
 namespace BeautySite.UI.adm
 {
@@ -22,6 +23,7 @@ namespace BeautySite.UI.adm
             txtIdServico.Text = objModeloServico.IdServico.ToString();
             txtNomeServico.Text = objModeloServico.NomeServico.ToString();
             txtDescricaoServico.Text = objModeloServico.DescricaoServico.ToString();
+            lblfUp1.Text = objModeloServico.UrlImgServico.ToString();
 
         }
 
@@ -70,7 +72,7 @@ namespace BeautySite.UI.adm
             return validator;
         }
 
-        protected void btnRecord_Click(object sender, EventArgs e)
+        public void btnRecord_Click(object sender, EventArgs e)
         {
             if (ValidatePage())
             {
@@ -83,17 +85,18 @@ namespace BeautySite.UI.adm
                 if (fUp1.HasFile)
                 {
                     string str = fUp1.FileName;
-                    fUp1.PostedFile.SaveAs(Server.MapPath("~/resource/img/" + str));
-                    string CaminhoImg = "~/resource/img/" + str.ToString();
+                    fUp1.PostedFile.SaveAs(Server.UrlDecode(@"C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\ImgSave\" + str));
+                    string CaminhoImg = @"C:\Users\vinicius.ssantos79\source\repos\BeautySite\BeautySite.ZDesktop\ImgSave\" + str.ToString();
                     objModeloServico.UrlImgServico = CaminhoImg;
+
                 }
                 else
                 {
                     lblFiltro.Text = "Deu Ruim!!";
                 }
-
                 if (string.IsNullOrEmpty(txtIdServico.Text))
                 {
+
                     objBLLServico.CadastrarServicoBLL(objModeloServico);
                     PopularGVServico();
                     lblMessage.Text = $"Servico {objModeloServico.NomeServico} Cadastrado com sucesso";
@@ -154,5 +157,7 @@ namespace BeautySite.UI.adm
             CarregaDados();
 
         }
+
+
     }
 }

@@ -83,7 +83,8 @@ namespace BeautySite.ZDesktop.Usuario
                 txtSenha.Text = objModelo.Senha.ToString();
                 txtEmail.Text = objModelo.Email.ToString();
                 txtTel.Text = objModelo.Telefone.ToString();
-                cbo1.SelectedText = objModelo.TipoUsuario_IdTipoUsuario.ToString();
+                PopularCBO();
+                cbo1.Text = objModelo.TipoUsuario_IdTipoUsuario.ToString();
                 cpAtivo();
             }
             else
@@ -185,6 +186,14 @@ namespace BeautySite.ZDesktop.Usuario
             }
             return validator;
 
+        }
+
+        public void PopularCBO()
+        {
+            cbo1.DataSource = objBLL.CarregaDDList();
+            cbo1.ValueMember = "IdTipoUsuario";
+            cbo1.DisplayMember = "DescricaoTipoUsuario";
+            cbo1.Refresh();
         }
 
 

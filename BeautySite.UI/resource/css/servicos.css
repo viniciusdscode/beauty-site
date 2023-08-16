@@ -131,15 +131,14 @@ header {
 
 
 
-.Menu h1 {
-    background: url(../img/royal_crown_set-05\ .svg) no-repeat;
-    align-self: auto;
-    width: 170px;
-    height: 100px;
-    text-indent: -9999;
-    margin-left: 10%;
-
-}
+    .Menu h1 {
+        background: url('../img/royal_crown_set-05 .svg') no-repeat;
+        align-self: auto;
+        width: 170px;
+        height: 100px;
+        text-indent: -9999;
+        margin-left: 10%;
+    }
 /*#endregion*/
 
 /*#region CardsServico*/

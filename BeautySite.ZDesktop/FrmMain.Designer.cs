@@ -62,9 +62,9 @@
             this.label1.Font = new System.Drawing.Font("Comfortaa", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(546, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 30);
+            this.label1.Size = new System.Drawing.Size(20, 30);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.label1.Text = " ";
             // 
             // toolStrip1
             // 

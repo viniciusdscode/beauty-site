@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRelatorioUsuario));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.cbo1 = new System.Windows.Forms.ComboBox();
             this.gv1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnFiltrar = new System.Windows.Forms.Button();
-            this.cbo1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -128,6 +128,34 @@
             this.panel1.Size = new System.Drawing.Size(1000, 800);
             this.panel1.TabIndex = 2;
             // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltrar.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnFiltrar.Location = new System.Drawing.Point(914, 126);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(72, 31);
+            this.btnFiltrar.TabIndex = 3;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            // 
+            // cbo1
+            // 
+            this.cbo1.BackColor = System.Drawing.Color.AliceBlue;
+            this.cbo1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo1.Font = new System.Drawing.Font("Comfortaa", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo1.ForeColor = System.Drawing.Color.Black;
+            this.cbo1.FormattingEnabled = true;
+            this.cbo1.IntegralHeight = false;
+            this.cbo1.Location = new System.Drawing.Point(774, 128);
+            this.cbo1.Name = "cbo1";
+            this.cbo1.Size = new System.Drawing.Size(135, 26);
+            this.cbo1.TabIndex = 12;
+            // 
             // gv1
             // 
             this.gv1.AllowUserToAddRows = false;
@@ -144,23 +172,23 @@
             this.gv1.CausesValidation = false;
             this.gv1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gv1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle49.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle49.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle49.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gv1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle50.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle50.Font = new System.Drawing.Font("Comfortaa", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))));
-            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gv1.DefaultCellStyle = dataGridViewCellStyle50;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comfortaa", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gv1.DefaultCellStyle = dataGridViewCellStyle2;
             this.gv1.EnableHeadersVisualStyles = false;
             this.gv1.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.gv1.Location = new System.Drawing.Point(12, 170);
@@ -168,20 +196,20 @@
             this.gv1.Name = "gv1";
             this.gv1.ReadOnly = true;
             this.gv1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle51.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle51.Font = new System.Drawing.Font("Comfortaa", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle51.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gv1.RowHeadersDefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comfortaa", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gv1.RowHeadersVisible = false;
-            dataGridViewCellStyle52.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))));
-            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.Color.AliceBlue;
-            this.gv1.RowsDefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(140)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.AliceBlue;
+            this.gv1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gv1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gv1.ShowCellErrors = false;
             this.gv1.ShowCellToolTips = false;
@@ -228,6 +256,17 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label3.Location = new System.Drawing.Point(771, 101);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(162, 21);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Selecione para FIltrar:";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -239,45 +278,6 @@
             this.label2.Size = new System.Drawing.Size(50, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Vs 1.01";
-            // 
-            // btnFiltrar
-            // 
-            this.btnFiltrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltrar.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnFiltrar.Location = new System.Drawing.Point(914, 126);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(72, 31);
-            this.btnFiltrar.TabIndex = 3;
-            this.btnFiltrar.Text = "Filtrar";
-            this.btnFiltrar.UseVisualStyleBackColor = true;
-            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
-            // 
-            // cbo1
-            // 
-            this.cbo1.BackColor = System.Drawing.Color.AliceBlue;
-            this.cbo1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbo1.Font = new System.Drawing.Font("Comfortaa", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo1.ForeColor = System.Drawing.Color.Black;
-            this.cbo1.FormattingEnabled = true;
-            this.cbo1.IntegralHeight = false;
-            this.cbo1.Location = new System.Drawing.Point(774, 128);
-            this.cbo1.Name = "cbo1";
-            this.cbo1.Size = new System.Drawing.Size(135, 26);
-            this.cbo1.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label3.Location = new System.Drawing.Point(771, 101);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Selecione para FIltrar:";
             // 
             // FrmRelatorioUsuario
             // 
