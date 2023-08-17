@@ -161,6 +161,7 @@
     <Content Include="resource\img\logo-linkedin %281%29.png" />
     <Content Include="resource\img\logob.svg" />
     <Content Include="resource\img\logo_beauty_site %282%29.png" />
+    <Content Include="resource\img\logo_beauty_site_100x100.png" />
     <Content Include="resource\img\menu.png" />
     <Content Include="resource\img\moroccan-flower.png" />
     <Content Include="resource\img\mosaicoImagem1.jpg" />
@@ -276,6 +277,7 @@
     <None Include="packages.config" />
     <Content Include="user\DefaultUser.Master" />
     <Content Include="resource\img\parte_explicacao01.webp" />
+    <Content Include="resource\img\logo_beauty_site.psd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

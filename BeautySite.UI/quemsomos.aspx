@@ -155,7 +155,7 @@
         <div class="site">
             <div class="rodape">
                 <div class="esq">
-                    <img src="resource/img/royal_crown_set-05 .svg" alt="logo beauty" class="logoF">
+                    <img src="resource/img/logo_beauty_site_100x100.png" alt="logo beauty" class="logoF">
                 </div>
 
                 <div class="centro">

@@ -135,7 +135,7 @@ header {
 
 
     .Menu h1 {
-        background: url('../img/royal_crown_set-05 .svg') no-repeat;
+        background: url(../img/logo_beauty_site_100x100.png) no-repeat;
         align-self: auto;
         width: 170px;
         height: 100px;
@@ -287,8 +287,8 @@ footer {
 }
 
 .esq img {
-    padding-top: 40%;
-    width: 170px;
+    padding-top: 50%;
+    width: 100px;
     height: 100px;
     background-size: cover;
 }
