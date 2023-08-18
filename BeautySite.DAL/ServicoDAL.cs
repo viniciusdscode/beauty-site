@@ -233,12 +233,6 @@ namespace BeautySite.DAL
             }
         }
 
-        
-
-
-
-
-
 
     }
 }

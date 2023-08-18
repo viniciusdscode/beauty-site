@@ -23,7 +23,7 @@ namespace BeautySite.ZDesktop
         }
 
         ServicoBLL objBLL = new ServicoBLL();
-        ServicoDTO objDTO = new ServicoDTO();
+
 
         private void btnFechar_Click(object sender, EventArgs e)
         {

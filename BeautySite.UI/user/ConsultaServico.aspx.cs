@@ -19,12 +19,14 @@ namespace BeautySite.UI.user
             gv1.DataSource = objBLLServico.ListarServico();
             gv1.DataBind();
         }
+
         public void FiltrarGVServico()
         {
             string objFilter = txtFiltro.Text;
             gv1.DataSource = objBLLServico.FiltrarServicoBLL(objFilter);
             gv1.DataBind();
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -49,6 +51,7 @@ namespace BeautySite.UI.user
                 FiltrarGVServico();
             }
         }
+
 
     }
 }
