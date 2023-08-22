@@ -74,9 +74,9 @@
             <Columns>
                 <asp:CommandField ShowSelectButton="True" ButtonType="Button" HeaderText="Opção"></asp:CommandField>
                 <asp:BoundField DataField="IdServico" HeaderText="Id" runat="server" />
-                <asp:ImageField DataImageUrlField="UrlImgServico" HeaderText="Imagem" ControlStyle-Width="110" ControlStyle-Height="110"></asp:ImageField>
                 <asp:BoundField DataField="NomeServico" HeaderText="Serviço" runat="server" />
                 <asp:BoundField DataField="DescricaoServico" HeaderText="Descrição" runat="server" />
+                <asp:ImageField DataImageUrlField="UrlImgServico" HeaderText="Imagem" ControlStyle-Width="110" ControlStyle-Height="110"></asp:ImageField>
 
             </Columns>
         </asp:GridView>

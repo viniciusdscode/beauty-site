@@ -18,6 +18,7 @@ namespace BeautySite.ZDesktop.Usuario
     {
         UsuarioDTO objModelo = new UsuarioDTO();
         UsuarioBLL objBLL = new UsuarioBLL();
+
         public FrmEditarUsuario()
         {
             InitializeComponent();
